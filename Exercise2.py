@@ -1,13 +1,12 @@
 import statistics
+list1: list[float] = []
 tall_players: float = 0
 above_avg_players: int = 0
-max_height: float = None
-min_height: float = None
 sum_players: int = 0
-list1: list[float] = []
+SENTINEL: int = -999
 while True:
      height: float = float(input('enter height of player'))
-     if height == -999:
+     if height == SENTINEL:
          break
      if height < 1.60 or height > 3.0:
          continue
