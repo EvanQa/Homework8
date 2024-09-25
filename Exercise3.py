@@ -1,10 +1,10 @@
-my_list = list(range(10,101,10))
-print(my_list)
+numbers = [i for i in range(10, 101, 10)]
 while True:
-    numbers: int = int(input('enter a number'))
-    if numbers == -999:
+    user_input = int(input("enter a number : (for break enter -999) "))
+    if user_input == -999:
         break
-for i in range(len(numbers)):
-        if numbers < my_list[i]:
-            my_list.insert(i, numbers)
-        print(my_list)
+    numbers.append(user_input)
+    numbers.sort()
+
+
+print("The sorted list: ", numbers)
